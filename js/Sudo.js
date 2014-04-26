@@ -179,12 +179,18 @@ Sudoku.prototype = {
 		//单击可编辑事件
 		$("#gameBoard").click(function(eventObj){
 			var $target = $(eventObj.target);
+			var posi = $target.position();
+			var gameBoardPos = $(this).position();
+			var selectBoardPos = {top:gameBoardPos.top+posi.top,left:gameBoardPos.left+posi.left};
+			var $selectBoard = $("#selectBoard");
 			if($target.hasClass('editable')){
-				if(eventObj.clientY+10>500){
-						$('#selectBoard').css({'top':eventObj.clientY-80,'left':eventObj.clientX+10,'display':'block'});
-				}else{
-						$('#selectBoard').css({'top':eventObj.clientY+10,'left':eventObj.clientX+10,'display':'block'});
+				if(posi.top+$selectBoard.height()>$(this).height()){
+					selectBoardPos.top = selectBoardPos.top-$selectBoard.height()+$target.height();
 				}
+				if(posi.left+$selectBoard.width()>$(this).width()){
+					selectBoardPos.left = selectBoardPos.left-$selectBoard.width()+$target.width();
+				}
+				$selectBoard.css({'top':selectBoardPos.top,'left':selectBoardPos.left,'display':'block'});
 				self.editIndex = eventObj.target.id;
 			}
 		});
@@ -200,7 +206,9 @@ Sudoku.prototype = {
 			$('#selectBoard').css({'display':'none'});
 			var solveStr = self.solving.join();
 			if(solveStr.indexOf('0')<0){self.checkAllAnswer();}//最后一个检查是否完成游戏			
-		});
+		}).mouseleave(function(){
+			$(this).css({'display':'none'});
+		});;
 
 	},
 	// 初始化游戏局面

@@ -29,10 +29,10 @@
 /**********
 *界面样式
 *********/
-	body{ width:900px; border:1px #ccc solid; position:relative; top:25px;background: #f4f4f4 ;}
+	body{ width:900px; border:1px #ccc solid; text-align:center;background: #f4f4f4 ;}
 	#header{ height:100px;line-height:35px; margin-top:10px; margin-left:30px;width:820px; text-indent:2em;}
 	#footer{ width:400px; text-align:right; position:absolute; bottom:10px; right:10px; font-size:14px;}
-	#mainArea{ width:900px; height:600px;background: #f4f4f4 ;border:1px #ccc solid; position:relative;}
+	#mainArea{ width:900px; height:600px;background: #f4f4f4 ;border:1px #ccc solid; position:relative; margin:0 auto;}
 		#mainArea #gameBoard{ width:450px; height:450px; top:140px; left:380px;/*margin:15px 50px auto 40px; float:right;*/ position:absolute;}
 		#mainArea #selectBoard{ width:98px; height:98px; top:0px; left:0px; position:absolute; background:#FFF; display:none; z-index:99;}
 	#control{width:250px;height:auto;float:left;margin-top:70px;margin-left:65px;}
