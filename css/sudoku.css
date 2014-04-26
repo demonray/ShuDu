@@ -1,0 +1,136 @@
+@charset "utf-8";
+/* CSS Document */
+	.center{margin:0 auto;}
+	.boxShadow{ 
+		-webkit-box-shadow:3px 3px 3px #999;
+		-moz-box-shadow:3px 3px 3px #999;
+		-ms-box-shadow:3px 3px 3px #999;
+		-o-box-shadow:3px 3px 3px #999;
+	}
+	.textShadow{
+		text-shadow: 3px 3px 7px #bbb;
+		filter:progid:DXImageTransform.Microsoft.Shadow(color='gray', Direction=135, Strength=4);
+	}
+	.font{ font-family:"微软雅黑"}
+	.color{ color:#333}
+	.background1{background:#ccc;}
+	.background2{background:#aaa;}
+	.background0{background:#c6c;};
+	.radius{
+		border-radius:3px;
+		-moz-border-radius:5px;
+		-ms-border-radius:5px;
+		-o-border-radius:5px;
+		-webkit-border-radius:5px;
+	}
+	.wrong{ background:#c6c}
+/*	div{ cursor:default;}
+	p{ line-height:30px; font-size:17px; padding-top:20px;}*/
+/**********
+*界面样式
+*********/
+	body{ width:900px; border:1px #ccc solid; position:relative; top:25px;background: #f4f4f4 ;}
+	#header{ height:100px;line-height:35px; margin-top:10px; margin-left:30px;width:820px; text-indent:2em;}
+	#footer{ width:400px; text-align:right; position:absolute; bottom:10px; right:10px; font-size:14px;}
+	#mainArea{ width:900px; height:600px;background: #f4f4f4 ;border:1px #ccc solid; position:relative;}
+		#mainArea #gameBoard{ width:450px; height:450px; top:140px; left:380px;/*margin:15px 50px auto 40px; float:right;*/ position:absolute;}
+		#mainArea #selectBoard{ width:98px; height:98px; top:0px; left:0px; position:absolute; background:#FFF; display:none; z-index:99;}
+	#control{width:250px;height:auto;float:left;margin-top:70px;margin-left:65px;}
+	#btn{width:200px;margin-top:20px;margin-left:20px;}
+	#timer{font-size:26px;margin-top:30px;,width:250px; text-align:center;}
+	#tips{position:absolute; top:300px; left:450px;font-size:56px; color:#F00;text-shadow: 3px 3px 7px #F00;
+		filter:progid:DXImageTransform.Microsoft.Shadow(color='red', Direction=135, Strength=4);
+	-webkit-transition: all 2s linear 0s;
+	-moz-transition: all 2s linear 0s;
+	-ms-transition: all 2s linear 0s;
+	-o-transition: all 2s linear 0s;
+	transition: all 2s linear 0s;
+  -webkit-transform:scale(1.5);
+  -webkit-transform-origin:0 0;
+  display:none;
+}
+	
+/* button 
+---------------------------------------------- */
+#mainArea .button {
+	display: inline-block;
+	zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */
+	*display: inline;
+	vertical-align: baseline;
+	margin: 10px 2px;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: 16px/100% Arial, Helvetica, sans-serif;
+	padding: .5em 2em .55em;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	-webkit-border-radius: .5em; 
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	width:200px;
+	height:40px;
+}
+#mainArea .button:hover {
+	text-decoration: none;
+}
+#mainArea .button:active {
+	position: relative;
+	top: 1px;
+}
+/* white */
+#mainArea .white {
+	color: #606060;
+	border: solid 1px #b7b7b7;
+	background: #fff;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ededed));
+	background: -moz-linear-gradient(top,  #fff,  #ededed);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed');
+}
+#mainArea .white:hover {
+	background: #ededed;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#dcdcdc));
+	background: -moz-linear-gradient(top,  #fff,  #dcdcdc);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dcdcdc');
+}
+#mainArea .white:active {
+	color: #999;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#fff));
+	background: -moz-linear-gradient(top,  #ededed,  #fff);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#ffffff');
+}
+/**********
+*游戏样式
+*********/
+	#mainArea .block{ 
+		width:46px; 
+		height:46px; 
+		border:1px solid #ccc; 
+		margin:1px; 
+		float:left; 
+		line-height:46px; 
+		text-align:center; 
+		font-size:27px; 
+		border-radius:5px;
+		-moz-border-radius:5px;
+		-ms-border-radius:5px;
+		-o-border-radius:5px;
+		-webkit-border-radius:5px;
+	}
+	#mainArea .editable{color:#06F;}
+	#mainArea .editable:hover{ background:#f1f1f1;}
+	
+	#mainArea .selectDiv{
+		width:30px; 
+		height:30px; 
+		border:1px solid #ccc; 
+		margin:1px; 
+		float:left; 
+		line-height:30px; 
+		text-align:center; 
+		font-size:20px; 
+	}
+	#mainArea .selectDiv:hover{ background:#6CC;}

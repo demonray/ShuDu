@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>sudoku</title>
+<link rel="stylesheet" type="text/css" href="css/sudoku.css"/>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script type="text/javascript" src="js/jQuery.js"></script>
+<script type="text/javascript" src="js/jQuery.dropdown.js"></script>
+<script type="text/javascript" src="js/Sudo.js"></script>
+</head>
+<body class="center boxShadow">
+<div id="mainArea">
+    <div id="header" class="center">
+      <h1 class="textShadow font color">数 独 游 戏</h1>
+      <p>数独是一种数字游戏，在左边的9×9方格中，填入1-9这九个数字，规则是：每一行，每一列，每个小的九宫格中，1-9只能出现一次！ </p>
+    </div>
+    <div id="control">
+      <div id="levelSelect"><select id="cd-dropdown" name="cd-dropdown" class="cd-select">
+        <option value="-1" selected>难度选择</option>
+        <option value="1" class="icon-monkey">初级</option>
+        <option value="2" class="icon-bear">中级</option>
+        <option value="3" class="icon-squirrel">高级</option>
+        <option value="4" class="icon-elephant">骨灰级</option>
+      </select>
+      </div>
+      <div id="timer" class="textShadow">已用时：<span id="time">00:00:00</span></div>
+      <div id="btn">
+        <input type="button" value="开始游戏" class="button white" name="start"/>
+        <input type="button" value="暂停游戏" class="button white" name="pause"/>
+        <input type="button" value="显示答案" class="button white" name="showAnswer"/>
+        <input type="button" value="重置局面" class="button white" name="reset"/>
+      </div>
+    </div>
+    <div id="gameBoard" class="font color"></div>
+    <div id="selectBoard" class="radius textShadow font color block boxShadow"></div>
+    <div id="tips" class="font textShadow">你太棒了！</div>
+</div>
+</body>
+</html>
